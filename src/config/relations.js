@@ -1,7 +1,8 @@
 import { sequelize } from "./database.js";
-import { AlumnosFuturosModel } from "../models/Alumnos_futuros.model.js";
-import { AlumnosActualesModel } from "../models/Alumnos_actuales.model.js";
-import { AlumnosRespuestasModel } from "../models/Alumnos_respuestas.model.js";
+import { Genero } from "../models/Genero.model.js";
+import { Localidad } from "../models/Localidad.model.js";
+import { Preguntas } from "../models/Preguntas.model.js";
+import { Encuesta } from "../models/Encuesta.model.js";
 
 export async function conectarBD() {
     try {
