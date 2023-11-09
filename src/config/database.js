@@ -1,9 +1,12 @@
 import { Sequelize } from "sequelize";
+import 'dotenv/config';
 
 export const sequelize = new Sequelize(
-    'uni_encuesta', 
-    'postgres', 
-    '46154094', {
-    host: 'localhost',
-    dialect: 'postgres'
-});
+    process.env.DB_NAME,
+    process.env.DB_USER,
+    process.env.DB_PASSWORD,
+    {
+        host: process.env.DB_HOST,
+        dialect: process.env.DB_DIALECT
+    } 
+);
