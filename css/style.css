@@ -1,0 +1,22 @@
+.Cuadro {
+    background-color: #005954;
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    border: 1px solid #cedad7;
+    border-radius: 10px;
+    box-shadow: 0px 5px 5px 5px #000000;
+}
+
+.title {
+    color: rgb(255, 255, 255);
+  
+    border: 1px solid #cedad7;
+   
+    box-shadow: 0px 5px 5px #000000;
+}
+.btn-dark {
+    transition: transform 0.3s;
+}
+.btn-dark:hover {
+    transform: scale(1.1);
+}
