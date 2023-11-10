@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encuesta</title>
-    <link rel="stylesheet" href="/Formulario-Mineria/css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
@@ -22,7 +22,7 @@
             </div>
 
             <div class="container mt-5 col-8">   
-                <form action="" method="POST">
+                <form action="" id="formulario" method="POST">
         
                     <div class="form-group mt-4">
                         <label for="edad">Edad:</label>
@@ -48,16 +48,16 @@
                     <div class="form-group mt-3">
                         <label for="localidad">Localidad:</label><br>
                         <select class="form-control mt-2" name="localidad" id="" required>
-                            <option value="">Formosa</option>
-                            <option value="">Clorinda</option>
-                            <option value="">El colorado</option>
-                            <option value="">Ingeniero Juarez</option>
-                            <option value="">Laguna Blanca</option>
-                            <option value="">Piraré</option>
-                            <option value="">Mayor Villafañe</option>
-                            <option value="">Las Lomitas</option>
-                            <option value="">General Manuel Gelgrano</option>
-                            <option value="">Herradura</option>
+                            <option value="1">Formosa</option>
+                            <option value="2">Clorinda</option>
+                            <option value="3">El Colorado</option>
+                            <option value="4">Ingeniero Juarez</option>
+                            <option value="5">Laguna Blanca</option>
+                            <option value="6">Piraré</option>
+                            <option value="7">Mayor Villafañe</option>
+                            <option value="8">Las Lomitas</option>
+                            <option value="9">General Manuel Gelgrano</option>
+                            <option value="10">Laishí</option>
                         </select>
                     </div>
 
@@ -78,28 +78,28 @@
                     </div>
 
                     <div class="form-group mt-4">
-                        <label for="">¿Qué tipo de recursos de apoyo académico consideras mas importante?</label>
-                        <select class="form-control" name="" id="">
-                            <option value="">Tutorías</option>
-                            <option value="">Bibliotecas</option>
-                            <option value="">Laboratorios</option>
-                            <option value="">Grupos de estudio</option>
+                        <label for="recursos">¿Qué tipo de recursos de apoyo académico consideras mas importante?</label>
+                        <select class="form-control" name="recursos" id="recursos">
+                            <option value="1">Tutorías</option>
+                            <option value="2">Bibliotecas</option>
+                            <option value="3">Laboratorios</option>
+                            <option value="4">Grupos de estudio</option>
                         </select>
                     </div>
 
                     <div class="form-group mt-4">
                         <label for="oferta">¿Que tan satisfecho estás con la oferta académica?</label>
                         <p>En una escala del 1 al 10, donde 1 es muy insatisfecho y 10 muy satisfecho</p>
-                        <input type="range" name="oferta" id="">
+                        <input type="range" name="oferta" id="oferta">
                     </div>
 
                     <div class="form-group mt-4">
                         <label for="calif">¿Cómo calificarías la comunicación y el apoyo de tus profesores?</label>
-                        <select class="form-control" name="calif" id="">
-                            <option value="">Excelente</option>
-                            <option value="">Bueno</option>
-                            <option value="">Aceptable</option>
-                            <option value="">Necesita mejorar</option>
+                        <select class="form-control" name="calif" id="calif">
+                            <option value="1">Excelente</option>
+                            <option value="2">Bueno</option>
+                            <option value="3">Aceptable</option>
+                            <option value="4">Necesita mejorar</option>
                         </select>
                     </div>
 
@@ -119,10 +119,10 @@
                     <div class="form-group mt-4">
                         <label for="carrera">¿Que carrera estás cursando?</label>
                         <select class="form-control" name="carrera" id="">
-                            <option value="">Desarrollo de Software Multiplataforma</option>
-                            <option value="">Mecatrónica</option>
-                            <option value="">Telecomunicaciones</option>
-                            <option value="">Quimica Industrial</option>
+                            <option value="1">Desarrollo de Software Multiplataforma</option>
+                            <option value="2">Mecatrónica</option>
+                            <option value="3">Telecomunicaciones</option>
+                            <option value="4">Quimica Industrial</option>
                         </select>
                     </div>
 
@@ -161,6 +161,7 @@
 
     </div>
 </body>
+<script src="js/main.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
 </script>

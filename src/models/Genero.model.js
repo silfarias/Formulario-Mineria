@@ -11,23 +11,21 @@ export const Genero = sequelize.define("genero", {
         type: DataTypes.STRING,
         allowNull: false
     },
-    createdAt: {
-        type: DataTypes.DATE,
-        allowNull: true,
-        defaultValue: sequelize.literal('CURRENT_TIMESTAMP')
-    },
-    updatedAt: {
-        type: DataTypes.DATE,
-        allowNull: true,
-        defaultValue: sequelize.literal('CURRENT_TIMESTAMP')
-    },
-    deletedAt: {
-        type: DataTypes.DATE,
-        allowNull: true
-    }
 }, {
-    createdAt: true,
-    updatedAt: true,
-    deletedAt: true,
+    timestamps: false,
     tableName: 'genero'
 })
+
+/* const generos = [
+    { id_genero: 1, nombre: "Femenino" },
+    { id_genero: 2, nombre: "Masculino" },
+    { id_genero: 3, nombre: "Otro" }
+]
+
+Genero.bulkCreate(generos)
+.then(() => {
+    console.log("Generos insertadas")
+})
+.catch((error) => {
+    console.log(error)
+}) */
