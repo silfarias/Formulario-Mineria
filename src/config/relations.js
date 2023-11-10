@@ -16,13 +16,32 @@ export const relations = () => {
         Localidad.hasMany(Encuesta, { foreignKey: 'id_localidad' });
         Encuesta.belongsTo(Localidad, { foreignKey: 'id_localidad' });
 
-        Preguntas.hasMany(Encuesta, { foreignKey: 'id_preguntas' });
-        Encuesta.belongsTo(Preguntas, { foreignKey: 'id_preguntas' });
+        Respuesta1.hasMany(Encuesta, { foreignKey: 'id_respuesta1' });
+        Encuesta.belongsTo(Respuesta1, { foreignKey: 'id_respuesta1' });
+
+        Respuesta2.hasMany(Encuesta, { foreignKey: 'id_respuesta2' });
+        Encuesta.belongsTo(Respuesta2, { foreignKey: 'id_respuesta2' });
+
+        Respuesta3.hasMany(Encuesta, { foreignKey: 'id_respuesta3' });
+        Encuesta.belongsTo(Respuesta3, { foreignKey: 'id_respuesta3' });
+
+        Respuesta4.hasMany(Encuesta, { foreignKey: 'id_respuesta4' });
+        Encuesta.belongsTo(Respuesta4, { foreignKey: 'id_respuesta4' });
+
+
+
 
         Preguntas.hasMany(Respuesta1, {foreignKey: 'id_pregunta'});
+        Respuesta1.belongsTo(Preguntas, {foreignKey: 'id_pregunta'});
+
         Preguntas.hasMany(Respuesta2, {foreignKey: 'id_pregunta'});
+        Respuesta2.belongsTo(Preguntas, {foreignKey: 'id_pregunta'});
+
         Preguntas.hasMany(Respuesta3, {foreignKey: 'id_pregunta'});
+        Respuesta3.belongsTo(Preguntas, {foreignKey: 'id_pregunta'});
+
         Preguntas.hasMany(Respuesta4, {foreignKey: 'id_pregunta'});
+        Respuesta4.belongsTo(Preguntas, {foreignKey: 'id_pregunta'});
         
     } catch (error) {
         console.log(error)
