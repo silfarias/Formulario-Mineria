@@ -12,9 +12,6 @@ export const relations = () => {
     
         Localidad.hasMany(Encuesta, { foreignKey: 'id_localidad' });
         Encuesta.belongsTo(Localidad, { foreignKey: 'id_localidad' });
-
-        Materias.hasMany(Encuesta, { foreignKey: 'id_materia' });
-        Encuesta.belongsTo(Materias, { foreignKey: 'id_materia' });
         
     } catch (error) {
         console.log(error)

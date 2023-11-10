@@ -19,8 +19,52 @@ export const Encuesta = sequelize.define("encuesta", {
         type: DataTypes.INTEGER,
         allowNull: false
     },
-    id_materia: {
+    respuesta1: {
         type: DataTypes.INTEGER,
+        allowNull: false,
+    },
+    respuesta2: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    respuesta3: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    respuesta4: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    respuesta5: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    respuesta6: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    respuesta7: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    respuesta8: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    respuesta9: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    respuesta10: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    respuesta11: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    respuesta12: {
+        type: DataTypes.STRING,
         allowNull: false
     }
 }, {
