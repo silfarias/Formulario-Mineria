@@ -10,6 +10,8 @@ import path from 'path';
 import { connectDB } from './src/config/database.js';
 import { relations } from './src/config/relations.js';
 
+
+
 import { encuestaRouter } from './src/routers/encuesta.routes.js';
 
 

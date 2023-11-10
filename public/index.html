@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encuesta</title>
     <link rel="stylesheet" href="/css/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 
 <body class="bg-dark">
@@ -16,12 +17,17 @@
     <main>
 
         <div class="container-xxl Cuadro col-7 mt-5">
-            <div class="text-center title rounded-2 bg-dark ">
-                <h3>Encuesta de Preferencias Académicas</h3>
+            <div class="row text-center title rounded-2 bg-dark ">
+                <div class="col-3">
+                    <img id="logo" src="/img/logo.png" alt="logo IPF">
+                </div>
+                <div class="col-9 mt-2">
+                    <h3>Encuesta destinada a los Estudiantes de Desarrollo de Software</h3>
+                </div>
             </div>
 
             <div class="container mt-5 col-8">   
-                <form action="/record" id="formulario" method="POST">
+                <form action="" id="formulario" method="POST">
         
                     <div class="form-group mt-4">
                         <label for="edad">Edad:</label>
@@ -29,24 +35,19 @@
                     </div>
         
                     <div class="form-group mt-3">
-                        <label for="genero">Género:</label><br>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="genero" id="id_genero" value="1">
-                            <label class="form-check-label" for="inlineRadio1">Femenino</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="genero" id="id_genero" value="2">
-                            <label class="form-check-label" for="inlineRadio2">Masculino</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="genero" id="id_genero" value="3">
-                            <label class="form-check-label" for="inlineRadio2">Otro</label>
-                        </div>
+                        <label for="genero">Genero:</label><br>
+                        <select class="form-select mt-2" name="genero" id="" required>
+                            <option selected>Selecciona Genero</option>
+                            <option value="1">Femenino</option>
+                            <option value="2">Masculino</option>
+                            <option value="3">Otro</option>
+                        </select>
                     </div>
 
                     <div class="form-group mt-3">
                         <label for="localidad">Localidad:</label><br>
-                        <select class="form-control mt-2" name="localidad" id="id_localidad" required>
+                        <select class="form-select mt-2" name="localidad" id="localidad" required>
+                            <option selected>Selecciona Localidad</option>
                             <option value="1">Formosa</option>
                             <option value="2">Clorinda</option>
                             <option value="3">El Colorado</option>
@@ -57,124 +58,185 @@
                             <option value="8">Las Lomitas</option>
                             <option value="9">General Manuel Gelgrano</option>
                             <option value="10">Laishí</option>
+                            <option value="11">Herradura</option>
+                            <option value="10">Palo Santo</option>
+                            <option value="10">Ibarreta</option>
+                        </select>
+                    </div>
+                    
+                    <!-- PREGUNTA 1 -->
+                    <div class="form-group mt-4">
+                        <label for="pregunta1">Del 1 al 10 ¿Como calificarias nuestro Instituto Politecnico?</label>
+                        <input type="number" min="1" max="10" class="mt-2 form-control" id="pregunta1" name="pregunta1" required>
+                    </div>
+
+                    <!-- PREGUNTA 2 -->
+                    <div class="form-group mt-3">
+                        <label for="pregunta2">¿Recomendarias nuestro Instituto a otros Estudiantes?</label><br>
+                        <select class="form-select mt-2" name="pregunta2" id="pregunta2" required>
+                            <option selected>Selecciona Respuesta</option>
+                            <option value="Si">Si</option>
+                            <option value="No">No</option>
                         </select>
                     </div>
 
-
-                    <!--Pregunta 1-->
-                    <div class="form-group mt-4">
-                        <label for="turno">¿Qué tipo de horario preferirías para tus clases?</label><br>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="turno" id="id_respuesta1" value="1">
-                            <label class="form-check-label" for="inlineRadio1">Mañana</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="turno" id="id_respuesta1" value="2">
-                            <label class="form-check-label" for="inlineRadio2">Tarde</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="turno" id="id_respuesta1" value="3">
-                            <label class="form-check-label" for="inlineRadio2">Noche</label>
-                        </div>
-                    </div>
-
-
-                    <!--Pregunta 2-->
-                    <div class="form-group mt-4">
-                        <label for="recursos">¿Qué tipo de recursos de apoyo académico consideras mas importante?</label>
-                        <select class="form-control" name="recursos" id="id_respuesta2">
-                            <option value="1">Tutorías</option>
-                            <option value="2">Bibliotecas</option>
-                            <option value="3">Laboratorios</option>
-                            <option value="4">Grupos de estudio</option>
+                    <!-- PREGUNTA 3 -->
+                    <div class="form-group mt-3">
+                        <label for="pregunta3">¿Que tan satisfecho estas con las materias que brinda el Instituto?</label><br>
+                        <select class="form-select mt-2" name="pregunta3" id="pregunta3" required>
+                            <option selected>Selecciona Respuesta</option>
+                            <option value="Excelente">Excelente</option>
+                            <option value="Bueno">Bueno</option>
+                            <option value="Aceptable">Aceptable</option>
+                            <option value="Necesita Mejoras">Necesita Mejoras</option>
                         </select>
                     </div>
 
-
-                    <!--Pregunta 3-->
-                    <div class="form-group mt-4">
-                        <label for="calif">¿Cómo calificarías la comunicación y el apoyo de tus profesores?</label>
-                        <select class="form-control" name="calif" id="id_respuesta3">
-                            <option value="1">Excelente</option>
-                            <option value="2">Bueno</option>
-                            <option value="3">Aceptable</option>
-                            <option value="4">Necesita mejorar</option>
+                    <!-- PREGUNTA 4 -->
+                    <div class="form-group mt-3">
+                        <label for="pregunta4">¿Que materia consideras que te brinda el mejor contenido?</label><br>
+                        <select class="form-select mt-2" name="pregunta4" id="pregunta4" required>
+                            <option selected>Selecciona Respuesta</option>
+                            <option value="1">Matemáticas Aplicada</option>
+                            <option value="2">Ingles</option>
+                            <option value="3">Base de Datos</option>
+                            <option value="4">Arquitectura y Sistemas Operativos</option>
+                            <option value="5">Taller de Integración</option>
+                            <option value="6">Tecnología y Sociedad</option>
+                            <option value="7">Algoritmo y Estructura de Datos</option>
+                            <option value="8">Ingeniería de Software</option>
+                            <option value="9">Minería de Datos</option>
+                            <option value="10">Taller de Lenguaje de Programación</option>
+                            <option value="11">Orientación en Valores y Motivación</option>
                         </select>
                     </div>
 
-
-                    <!--Pregunta 4-->
-                    <div class="form-group mt-4">
-                        <label for="carrera">¿Que carrera estás cursando?</label>
-                        <select class="form-control" name="carrera" id="id_respuesta4">
-                            <option value="1">Desarrollo de Software Multiplataforma</option>
-                            <option value="2">Mecatrónica</option>
-                            <option value="3">Telecomunicaciones</option>
-                            <option value="4">Quimica Industrial</option>
+                    <!-- PREGUNTA 5 -->
+                    <div class="form-group mt-3">
+                        <label for="pregunta5">¿Que materia consideras que tiene los mejores Profesores?</label><br>
+                        <select class="form-select mt-2" name="pregunta5" id="pregunta5" required>
+                            <option selected>Selecciona Respuesta</option>
+                            <option value="1">Matemáticas Aplicada</option>
+                            <option value="2">Ingles</option>
+                            <option value="3">Base de Datos</option>
+                            <option value="4">Arquitectura y Sistemas Operativos</option>
+                            <option value="5">Taller de Integración</option>
+                            <option value="6">Tecnología y Sociedad</option>
+                            <option value="7">Algoritmo y Estructura de Datos</option>
+                            <option value="8">Ingeniería de Software</option>
+                            <option value="9">Minería de Datos</option>
+                            <option value="10">Taller de Lenguaje de Programación</option>
+                            <option value="11">Orientación en Valores y Motivación</option>
                         </select>
                     </div>
 
-
-                    <!--Pregunta 5-->
-                    <div class="form-group mt-4">
-                        <label for="oferta">¿Que tan satisfecho estás con la oferta académica?</label>
-                        <p>En una escala del 1 al 10, donde 1 es muy insatisfecho y 10 muy satisfecho</p>
-                        <input type="range" name="oferta" min="1" max="10" id="respuesta5">
+                    <!-- PREGUNTA 6 -->
+                    <div class="form-group mt-3">
+                        <label for="pregunta6">¿Cual es la materia de la cual aprendiste más?</label><br>
+                        <select class="form-select mt-2" name="pregunta6" id="pregunta6" required>
+                            <option selected>Selecciona Respuesta</option>
+                            <option value="1">Matemáticas Aplicada</option>
+                            <option value="2">Ingles</option>
+                            <option value="3">Base de Datos</option>
+                            <option value="4">Arquitectura y Sistemas Operativos</option>
+                            <option value="5">Taller de Integración</option>
+                            <option value="6">Tecnología y Sociedad</option>
+                            <option value="7">Algoritmo y Estructura de Datos</option>
+                            <option value="8">Ingeniería de Software</option>
+                            <option value="9">Minería de Datos</option>
+                            <option value="10">Taller de Lenguaje de Programación</option>
+                            <option value="11">Orientación en Valores y Motivación</option>
+                        </select>
                     </div>
 
-
-                    <!--Pregunta 6-->
-                    <div class="form-group mt-4">
-                        <label for="recom">¿Recomendarías nuestra universidad a otros estudiantes?</label><br>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="recom" id="respuesta6" value="Si">
-                            <label class="form-check-label" for="inlineRadio1">Sí</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="recom" id="respuesta6" value="No">
-                            <label class="form-check-label" for="inlineRadio2">No</label>
-                        </div>
+                    <!-- PREGUNTA 7 -->
+                    <div class="form-group mt-3">
+                        <label for="pregunta7">¿Cual es la materia de la cual aprendiste más?</label><br>
+                        <select class="form-select mt-2" name="pregunta7" id="pregunta7" required>
+                            <option selected>Selecciona Respuesta</option>
+                            <option value="1">Matemáticas Aplicada</option>
+                            <option value="2">Ingles</option>
+                            <option value="3">Base de Datos</option>
+                            <option value="4">Arquitectura y Sistemas Operativos</option>
+                            <option value="5">Taller de Integración</option>
+                            <option value="6">Tecnología y Sociedad</option>
+                            <option value="7">Algoritmo y Estructura de Datos</option>
+                            <option value="8">Ingeniería de Software</option>
+                            <option value="9">Minería de Datos</option>
+                            <option value="10">Taller de Lenguaje de Programación</option>
+                            <option value="11">Orientación en Valores y Motivación</option>
+                        </select>
+                    </div>
+                    
+                    <!-- PREGUNTA 8 -->
+                    <div class="form-group mt-3">
+                        <label for="pregunta8">¿Cual es la materia de la que menos aprendiste?</label><br>
+                        <select class="form-select mt-2" name="pregunta8" id="pregunta8" required>
+                            <option selected>Selecciona Respuesta</option>
+                            <option value="1">Matemáticas Aplicada</option>
+                            <option value="2">Ingles</option>
+                            <option value="3">Base de Datos</option>
+                            <option value="4">Arquitectura y Sistemas Operativos</option>
+                            <option value="5">Taller de Integración</option>
+                            <option value="6">Tecnología y Sociedad</option>
+                            <option value="7">Algoritmo y Estructura de Datos</option>
+                            <option value="8">Ingeniería de Software</option>
+                            <option value="9">Minería de Datos</option>
+                            <option value="10">Taller de Lenguaje de Programación</option>
+                            <option value="11">Orientación en Valores y Motivación</option>
+                        </select>
                     </div>
 
-
-                    <!--Pregunta 7-->
-                    <div class="form-group mt-4">
-                        <label for="materia">¿Qué materia te gustaría agregar a tu carrera?</label>
-                        <input type="text" class="form-control" name="materia" id="id_respuesta7" required>
+                    <!-- PREGUNTA 9 -->
+                    <div class="form-group mt-3">
+                        <label for="pregunta9">¿Como te gustaria que sea el cursado?</label><br>
+                        <select class="form-select mt-2" name="pregunta9" id="pregunta9" required>
+                            <option selected>Selecciona Respuesta</option>
+                            <option value="Presencial">Presencial</option>
+                            <option value="Online">Online</option>
+                            <option value="Mixto">Mixto</option>
+                        </select>
                     </div>
 
-
-                    <!--Pregunta 8-->
-                    <div class="form-group mt-4">
-                        <label for="conforme">¿Estás conforme con el contenido de cada materia?</label><br>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="conforme" id="respuesta8" value="Si">
-                            <label class="form-check-label" for="inlineRadio1">Sí</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="conforme" id="respuesta8" value="No">
-                            <label class="form-check-label" for="inlineRadio2">No</label>
-                        </div>
+                    <!-- PREGUNTA 10 -->
+                    <div class="form-group mt-3">
+                        <label for="pregunta10">Si pudieras elegir un turno de cursado ¿Cual sería?</label><br>
+                        <select class="form-select mt-2" name="pregunta10" id="pregunta10" required>
+                            <option selected>Selecciona Respuesta</option>
+                            <option value="Mañana">Mañana</option>
+                            <option value="Tarde">Tarde</option>
+                            <option value="Noche">Noche</option>
+                        </select>
                     </div>
 
-
-                    <!--Pregunta 9-->
+                    <!-- PREGUNTA 11 -->
                     <div class="form-group mt-4">
-                        <label for="inne">¿Qué materia de las que cursas actualmente te parece innecesaria?</label><br>
-                        <input type="text" class="form-control" id="id_respuesta9" name="inne" required>
+                        <label for="pregunta11">Si tuvieras que definir esta Tecnicatura con una palabra ¿Cual sería?</label>
+                        <input type="text" class="mt-2 form-control" id="pregunta11" name="pregunta11" required>
+                    </div>
+
+                    <!-- PREGUNTA 12 -->
+                    <div class="form-group mt-4">
+                        <label for="pregunta12">¿Tenes alguna sugerencia para esta Tecnicatura?</label>
+                        <input type="text" class="mt-2 form-control" id="pregunta12" name="pregunta12" required>
                     </div>
         
-                    <button type="submit" class="btn btn-primary mt-5">Enviar</button>
+                    <button type="submit" class="btn btn-success mt-4">Enviar</button>
                 </form>
             </div>
+        
+
+
+
     </main>
 
     <div class="mt-5">
 
     </div>
 </body>
-
-<script src="/js/main.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+</script>
 
 </html>
