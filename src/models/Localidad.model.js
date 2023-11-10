@@ -35,5 +35,4 @@ Localidad.bulkCreate(localidades)
     })
     .catch((error) => {
         console.log(error)
-    })
- */
+    })  */
