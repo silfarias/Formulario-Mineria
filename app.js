@@ -10,6 +10,8 @@ import path from 'path';
 import { connectDB } from './src/config/database.js';
 import { relations } from './src/config/relations.js';
 
+//Routers
+import { encuestaRouter } from './src/routers/encuesta.routes.js';
 
 //Archivos estaticos
 import { fileURLToPath } from 'url';
@@ -31,9 +33,11 @@ app.use(morgan('dev'))
 
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use('/api/encuesta', encuestaRouter)
+
 
 app.listen(PORT, async () => {
     console.log(`Servidor corriendo en http://localhost:${PORT}`)
-    connectDB()
     relations()
+    connectDB()
 });

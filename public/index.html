@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encuesta</title>
     <link rel="stylesheet" href="/css/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 
 <body class="bg-dark">
@@ -32,22 +31,22 @@
                     <div class="form-group mt-3">
                         <label for="genero">Género:</label><br>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="genero" id="genero" value="1">
+                            <input class="form-check-input" type="radio" name="genero" id="id_genero" value="1">
                             <label class="form-check-label" for="inlineRadio1">Femenino</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="genero" id="genero" value="2">
+                            <input class="form-check-input" type="radio" name="genero" id="id_genero" value="2">
                             <label class="form-check-label" for="inlineRadio2">Masculino</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="genero" id="genero" value="3">
+                            <input class="form-check-input" type="radio" name="genero" id="id_genero" value="3">
                             <label class="form-check-label" for="inlineRadio2">Otro</label>
                         </div>
                     </div>
 
                     <div class="form-group mt-3">
                         <label for="localidad">Localidad:</label><br>
-                        <select class="form-control mt-2" name="localidad" id="localidad" required>
+                        <select class="form-control mt-2" name="localidad" id="id_localidad" required>
                             <option value="1">Formosa</option>
                             <option value="2">Clorinda</option>
                             <option value="3">El Colorado</option>
@@ -66,15 +65,15 @@
                     <div class="form-group mt-4">
                         <label for="turno">¿Qué tipo de horario preferirías para tus clases?</label><br>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="turno" id="turno" value="1">
+                            <input class="form-check-input" type="radio" name="turno" id="id_respuesta1" value="1">
                             <label class="form-check-label" for="inlineRadio1">Mañana</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="turno" id="turno" value="2">
+                            <input class="form-check-input" type="radio" name="turno" id="id_respuesta1" value="2">
                             <label class="form-check-label" for="inlineRadio2">Tarde</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="turno" id="turno" value="3">
+                            <input class="form-check-input" type="radio" name="turno" id="id_respuesta1" value="3">
                             <label class="form-check-label" for="inlineRadio2">Noche</label>
                         </div>
                     </div>
@@ -83,7 +82,7 @@
                     <!--Pregunta 2-->
                     <div class="form-group mt-4">
                         <label for="recursos">¿Qué tipo de recursos de apoyo académico consideras mas importante?</label>
-                        <select class="form-control" name="recursos" id="recursos">
+                        <select class="form-control" name="recursos" id="id_respuesta2">
                             <option value="1">Tutorías</option>
                             <option value="2">Bibliotecas</option>
                             <option value="3">Laboratorios</option>
@@ -95,7 +94,7 @@
                     <!--Pregunta 3-->
                     <div class="form-group mt-4">
                         <label for="calif">¿Cómo calificarías la comunicación y el apoyo de tus profesores?</label>
-                        <select class="form-control" name="calif" id="calif">
+                        <select class="form-control" name="calif" id="id_respuesta3">
                             <option value="1">Excelente</option>
                             <option value="2">Bueno</option>
                             <option value="3">Aceptable</option>
@@ -107,7 +106,7 @@
                     <!--Pregunta 4-->
                     <div class="form-group mt-4">
                         <label for="carrera">¿Que carrera estás cursando?</label>
-                        <select class="form-control" name="carrera" id="">
+                        <select class="form-control" name="carrera" id="id_respuesta4">
                             <option value="1">Desarrollo de Software Multiplataforma</option>
                             <option value="2">Mecatrónica</option>
                             <option value="3">Telecomunicaciones</option>
@@ -120,7 +119,7 @@
                     <div class="form-group mt-4">
                         <label for="oferta">¿Que tan satisfecho estás con la oferta académica?</label>
                         <p>En una escala del 1 al 10, donde 1 es muy insatisfecho y 10 muy satisfecho</p>
-                        <input type="range" name="oferta" min="1" max="10" id="oferta">
+                        <input type="range" name="oferta" min="1" max="10" id="respuesta5">
                     </div>
 
 
@@ -128,11 +127,11 @@
                     <div class="form-group mt-4">
                         <label for="recom">¿Recomendarías nuestra universidad a otros estudiantes?</label><br>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="recom" id="inlineRadio1" value="Si">
+                            <input class="form-check-input" type="radio" name="recom" id="respuesta6" value="Si">
                             <label class="form-check-label" for="inlineRadio1">Sí</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="recom" id="inlineRadio2" value="No">
+                            <input class="form-check-input" type="radio" name="recom" id="respuesta6" value="No">
                             <label class="form-check-label" for="inlineRadio2">No</label>
                         </div>
                     </div>
@@ -141,7 +140,7 @@
                     <!--Pregunta 7-->
                     <div class="form-group mt-4">
                         <label for="materia">¿Qué materia te gustaría agregar a tu carrera?</label>
-                        <input type="text" class="form-control" name="materia">
+                        <input type="text" class="form-control" name="materia" id="id_respuesta7" required>
                     </div>
 
 
@@ -149,11 +148,11 @@
                     <div class="form-group mt-4">
                         <label for="conforme">¿Estás conforme con el contenido de cada materia?</label><br>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="conforme" id="inlineRadio1" value="Si">
+                            <input class="form-check-input" type="radio" name="conforme" id="respuesta8" value="Si">
                             <label class="form-check-label" for="inlineRadio1">Sí</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="conforme" id="inlineRadio2" value="No">
+                            <input class="form-check-input" type="radio" name="conforme" id="respuesta8" value="No">
                             <label class="form-check-label" for="inlineRadio2">No</label>
                         </div>
                     </div>
@@ -162,7 +161,7 @@
                     <!--Pregunta 9-->
                     <div class="form-group mt-4">
                         <label for="inne">¿Qué materia de las que cursas actualmente te parece innecesaria?</label><br>
-                        <input type="text" class="form-control" name="inne">
+                        <input type="text" class="form-control" id="id_respuesta9" name="inne" required>
                     </div>
         
                     <button type="submit" class="btn btn-primary mt-5">Enviar</button>
@@ -174,9 +173,8 @@
 
     </div>
 </body>
-<script src="js/main.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
-</script>
+
+<script src="/js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
 </html>

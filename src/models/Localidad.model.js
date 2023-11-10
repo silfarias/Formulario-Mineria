@@ -27,6 +27,9 @@ export const Localidad = sequelize.define("localidad", {
     { id_localidad: 8, nombre: 'Las Lomitas' },
     { id_localidad: 9, nombre: 'General Manuel Gelgrano' },
     { id_localidad: 10, nombre: 'Laishí' },
+    { id_localidad: 11, nombre: 'Herradura' },
+    { id_localidad: 12, nombre: 'Palo Santo' },
+    { id_localidad: 13, nombre: 'Ibarreta' },
 ]
 
 Localidad.bulkCreate(localidades)
@@ -35,4 +38,4 @@ Localidad.bulkCreate(localidades)
     })
     .catch((error) => {
         console.log(error)
-    })  */
+    }) */
