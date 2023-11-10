@@ -10,8 +10,8 @@ import path from 'path';
 import { connectDB } from './src/config/database.js';
 import { relations } from './src/config/relations.js';
 
-//Routers
 import { encuestaRouter } from './src/routers/encuesta.routes.js';
+
 
 //Archivos estaticos
 import { fileURLToPath } from 'url';
@@ -28,13 +28,15 @@ const PORT = process.env.PORT || 3000
 app.use(cors())
 app.use(helmet())
 app.use(express.json())
+app.use(express.urlencoded({ extended: true }))
 app.use(morgan('dev'))
 
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/api/encuesta', encuestaRouter)
 
+//Guardar un registro de encuesta en la base de datos
+app.post("/record", encuestaRouter);
 
 app.listen(PORT, async () => {
     console.log(`Servidor corriendo en http://localhost:${PORT}`)
