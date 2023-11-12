@@ -38,7 +38,6 @@ export const crearEncuesta = async (req, res) => {
             respuesta12
         })
         await newEncuesta.save()
-
         res.status(201).json({ message: 'Encuesta registrada', newEncuesta })
     } catch (error) {
         console.error(error)

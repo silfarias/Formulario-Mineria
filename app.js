@@ -27,7 +27,11 @@ const app = express()
 const PORT = process.env.PORT || 3000
 
 
-app.use(cors())
+app.use(cors(
+    {
+        origin: '*',
+    }
+))
 app.use(helmet())
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
@@ -35,10 +39,14 @@ app.use(morgan('dev'))
 
 
 app.use(express.static(path.join(__dirname, 'public')));
+app.get('/', (_req, res) => {
+    const indexPath = path.join(__dirname, '/view/index.html');
+    res.sendFile(indexPath);
+});
 
 
 //Guardar un registro de encuesta en la base de datos
-app.post("/record", encuestaRouter);
+app.use("/record", encuestaRouter);
 
 app.listen(PORT, async () => {
     console.log(`Servidor corriendo en http://localhost:${PORT}`)
